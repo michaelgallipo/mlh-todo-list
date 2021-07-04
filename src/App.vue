@@ -4,7 +4,7 @@
     <h2 style="margin-top: 20px; margin-bottom: 20px">
       Internet Hippo's To Do App
     </h2>
-    <div class="col-sm-6">
+    <div class="col-sm-5">
       <input
         type="text"
         class="form-control"
@@ -14,12 +14,8 @@
         style="margin-left: 20px"
       />
     </div>
-    <div id="buttons" class="row">
-      <button
-        id="addItem"
-        class="btn btn-primary col-sm-2"
-        v-on:click="addItem()"
-      >
+    <div id="buttons" class="col-sm-2">
+      <button id="addItem" class="btn btn-primary" v-on:click="addItem()">
         Add New Item
       </button>
     </div>
@@ -94,7 +90,7 @@ export default {
       let id = this.list.length + 1;
       let item = { id: id, name: this.newItem, complete: false };
       this.list.push(item);
-      console.log(this.list);
+      // console.log(this.list);
       this.newItem = "";
     },
     markComplete: function(item) {
@@ -131,8 +127,9 @@ export default {
 } */
 
 #addItem {
-  margin-left: 30px;
+  /* margin-left: 30px; */
   margin-top: 15px;
+  text-align: left;
 }
 
 #complete,
